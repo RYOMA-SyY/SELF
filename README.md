@@ -8,23 +8,6 @@ Personal portfolio website showcasing my projects, skills, and experience.
 > **At least add my credential if u wanna copy it**\
 > **If u need any help feel free to contact me**
 
-## Features
-
-- Responsive design
-- Dark/Light theme toggle
-- Glassmorphism navbar effect
-- Dynamic typing animations
-- Modern UI/UX
-
-## Tech Stack
-
-- HTML5
-- CSS3 (with glassmorphism effects)
-- JavaScript (Typed.js, custom theme toggle)
-
-## Live Demo
-
-Visit: [https://riyoma.pages.dev/](https://riyoma.pages.dev/)
 
 ## Author
 
