@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Developer tools
+.gemini/
+.agent/
+brain/
+*.log
+
+# Dependencies
+node_modules/
+dist/
+build/

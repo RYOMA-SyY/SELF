@@ -1,0 +1,31 @@
+HTML5
+CSS3
+JavaScript
+TypeScript
+React
+Three.js
+Python
+Django
+PHP
+Java
+Jakarta EE
+C#
+.NET
+Android
+Laravel
+WebSockets
+C
+Git
+GitHub
+VS Code
+Eclipse IDE
+Android Studio
+N8N
+Google Colab
+Jupyter Notebook
+Docker
+Deep Learning
+NLP
+LLM
+Machine Learning
+
