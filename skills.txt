@@ -28,4 +28,12 @@ Deep Learning
 NLP
 LLM
 Machine Learning
+React Native
+PrimeReact
+GDScript
+Godot 4
+Django REST Framework
+SQLite3
+Retrieval-Augmented Generation (RAG)
+ChromaDB
 
