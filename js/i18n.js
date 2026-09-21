@@ -189,6 +189,10 @@
         for (var b = 0; b < btns.length; b++) {
             btns[b].classList.toggle("active", btns[b].getAttribute("data-lang") === l);
         }
+        var opts = document.querySelectorAll(".lang-option");
+        for (var o = 0; o < opts.length; o++) {
+            opts[o].classList.toggle("active", opts[o].getAttribute("data-lang") === l);
+        }
     }
 
     var current = currentLang();
@@ -202,6 +206,29 @@
                 try { localStorage.setItem(STORE_KEY, l); } catch (e) {}
                 if (l !== current) location.reload();
                 else apply(l);
+            });
+        }
+        // Mobile language slide-up sheet
+        var sheet = document.querySelector(".lang-sheet");
+        var backdrop = document.querySelector(".lang-sheet-backdrop");
+        function closeSheet() {
+            if (sheet) sheet.classList.remove("open");
+            if (backdrop) backdrop.classList.remove("open");
+        }
+        var sheetToggles = document.querySelectorAll(".lang-sheet-toggle");
+        for (var t = 0; t < sheetToggles.length; t++) {
+            sheetToggles[t].addEventListener("click", function () {
+                if (sheet) sheet.classList.toggle("open");
+                if (backdrop) backdrop.classList.toggle("open");
+            });
+        }
+        if (backdrop) backdrop.addEventListener("click", closeSheet);
+        var opts = document.querySelectorAll(".lang-option");
+        for (var o = 0; o < opts.length; o++) {
+            opts[o].addEventListener("click", function () {
+                var l = this.getAttribute("data-lang");
+                try { localStorage.setItem(STORE_KEY, l); } catch (e) {}
+                location.reload();
             });
         }
     });
