@@ -25,9 +25,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav ">
-              <li><a href="index.html" title="">01 : Home</a></li>
-              <li><a href="resume.html" title="">02 : Resume</a></li>
-              <li><a href="certifications.html" title="">03 : Certifications</a></li>
+              <li><a href="index.html" title="" data-i18n="nav.home">01 : Home</a></li>
+              <li><a href="resume.html" title="" data-i18n="nav.resume">02 : Resume</a></li>
+              <li><a href="certifications.html" title="" data-i18n="nav.certs">03 : Certifications</a></li>
             </ul>
             <div class="navbar-right-content">
               <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" type="button">
@@ -48,6 +48,12 @@
                   <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                 </svg>
               </button>
+              <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-lang="fr">FR</button>
+                <button type="button" class="lang-btn" data-lang="es">ES</button>
+                <button type="button" class="lang-btn" data-lang="de">DE</button>
+              </div>
             </div>
           </div>
         </div>
@@ -59,28 +65,75 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1>Resume</h1>
+          <h1 data-i18n="resume.title">Resume</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <h2 style="color:var(--primary)">Skills</h2>
+          <h2 style="color:var(--primary)" data-i18n="resume.skills">Skills</h2>
           <h3>Frontend &amp; Web</h3>
           <ul>
             <li>HTML5, CSS3, JavaScript, TypeScript, React, React Native, PrimeReact, Three.js</li>
           </ul>
+          <div class="project-badges">
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">React Native</span>
+          </div>
           <h3>Backend &amp; Systems</h3>
           <ul>
-            <li>Python, Django, Django REST Framework, PHP, Laravel, Java, Jakarta EE, C#, .NET, SQLite3</li>
+            <li>Python, Django, Django REST Framework, PHP, Laravel, Java, Jakarta EE, C#, .NET, SQLite3, PostgreSQL, MySQL</li>
             <li>Android, WebSockets</li>
           </ul>
+          <h3>Mobile</h3>
+          <ul>
+            <li>React Native, Android (Java), Flutter &amp; Dart (exploring)</li>
+          </ul>
+          <div class="project-badges">
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Android</span>
+            <span class="tech-badge exploring">Flutter (exploring)</span>
+            <span class="tech-badge exploring">Dart (exploring)</span>
+          </div>
+          <h3>Game Development</h3>
+          <ul>
+            <li>Godot 4, GDScript</li>
+          </ul>
+          <div class="project-badges">
+            <span class="tech-badge">Godot 4</span>
+            <span class="tech-badge">GDScript</span>
+          </div>
           <h3>Systems &amp; Low-Level</h3>
           <ul>
-            <li>C</li>
+            <li>C, Assembly (starter)</li>
           </ul>
+          <h3>Reverse Engineering &amp; Modding</h3>
+          <ul>
+            <li>Ghidra, Assembly (starter — currently learning)</li>
+            <li>Game modding: Minecraft, Black Ops 2</li>
+          </ul>
+          <div class="project-badges">
+            <span class="tech-badge exploring">Ghidra (starter)</span>
+            <span class="tech-badge exploring">Assembly (starter)</span>
+            <span class="tech-badge">Minecraft Modding</span>
+            <span class="tech-badge">Black Ops 2 Modding</span>
+          </div>
+          <h3>DevOps &amp; Deployment</h3>
+          <ul>
+            <li>Git, GitHub, Docker, Railway, Vercel, Netlify, Cloudflare Pages</li>
+          </ul>
+          <div class="project-badges">
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">GitHub</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Railway</span>
+            <span class="tech-badge">Vercel</span>
+            <span class="tech-badge">Netlify</span>
+            <span class="tech-badge">Cloudflare Pages</span>
+          </div>
           <h3>Tools &amp; Platforms</h3>
           <ul>
-            <li>Git, GitHub, VS Code, Eclipse IDE, Android Studio, Docker, Godot 4 (GDScript)</li>
+            <li>VS Code, Eclipse IDE, Android Studio, Godot 4 (GDScript)</li>
             <li>N8N, Google Colab, Jupyter Notebook</li>
           </ul>
 
@@ -92,20 +145,55 @@
           </ul>
         </div>
         <div class="col-xs-12 col-md-6">
-          <h2 style="color:var(--primary)">Featured Projects</h2>
+          <h2 style="color:var(--primary)" data-i18n="resume.main">Main Projects</h2>
           <ul>
-            <li><a href="https://github.com/RYOMA-SyY/SmartEx-PFE" target="_blank"
-                rel="noreferrer">SmartEx-PFE</a> — Smart examination platform for BTS Ibn Ghazala with AI-powered exam generation, PDF with QR codes, and student submissions (React, TypeScript, Django, Ollama AI)</li>
-            <li><a href="https://github.com/RYOMA-SyY/WallFit-RAG" target="_blank"
-                rel="noreferrer">WallFit-RAG</a> — Multilingual Moroccan fitness AI coach RAG system with hybrid vector/BM25 retrieval, cross-encoder rerankers, and custom security/prompt injection layers (Python, ChromaDB, Hugging Face)</li>
+            <li class="main-project"><a href="https://github.com/RYOMA-SyY/SmartEx-PFE" target="_blank"
+                rel="noreferrer">SmartEx-PFE</a> — Smart examination platform for BTS Ibn Ghazala with AI-powered exam generation, PDF with QR codes, and student submissions (React, TypeScript, Django, Ollama AI)
+              <div class="project-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">Ollama AI</span>
+              </div>
+            </li>
+            <li class="main-project"><a href="https://github.com/RYOMA-SyY/WallFit-RAG" target="_blank"
+                rel="noreferrer">WallFit-RAG</a> — Multilingual Moroccan fitness AI coach RAG system with hybrid vector/BM25 retrieval, cross-encoder rerankers, and custom security/prompt injection layers (Python, ChromaDB, Hugging Face)
+              <div class="project-badges">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">RAG</span>
+                <span class="tech-badge">ChromaDB</span>
+                <span class="tech-badge">Hugging Face</span>
+              </div>
+            </li>
+            <li class="main-project"><a href="https://github.com/RYOMA-SyY/AHURA" target="_blank"
+                rel="noreferrer">AHURA</a> — Godot 4 2D action game inspired by Hollow Knight featuring a custom 7-state machine player controller (GDScript, Godot 4)
+              <div class="project-badges">
+                <span class="tech-badge">Godot 4</span>
+                <span class="tech-badge">GDScript</span>
+              </div>
+            </li>
+            <li class="main-project"><a href="https://github.com/RYOMA-SyY/SchoolOS" target="_blank"
+                rel="noreferrer">SchoolOS</a> — Modern school management platform and centralized digital environment for educational workflows (TypeScript)
+              <div class="project-badges">
+                <span class="tech-badge">TypeScript</span>
+              </div>
+            </li>
+            <li class="main-project"><a href="https://chitchat-websocket-jee-production.up.railway.app/" target="_blank"
+                rel="noreferrer">CHITCHAT-WebSocket-JEE</a> — Real-time chat application using Jakarta EE and WebSockets (Java, JSP, WebSockets) — <a href="https://github.com/RYOMA-SyY/CHITCHAT-WebSocket-JEE" target="_blank" rel="noreferrer">Source</a>
+              <div class="project-badges">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Jakarta EE</span>
+                <span class="tech-badge">WebSockets</span>
+              </div>
+            </li>
+          </ul>
+
+          <h2 style="color:var(--primary)" data-i18n="resume.other">Other Projects</h2>
+          <ul>
             <li><a href="https://github.com/RYOMA-SyY/Lumiere-Ecom-React-ReactNative" target="_blank"
                 rel="noreferrer">Lumiere-Ecom-React-ReactNative</a> — Premium e-commerce application with multi-language (EN/FR/AR) and RTL layouts, persistent cart, address management, and order history (React, React Native, TypeScript)</li>
-            <li><a href="https://github.com/RYOMA-SyY/AHURA" target="_blank"
-                rel="noreferrer">AHURA</a> — Godot 4 2D action game inspired by Hollow Knight featuring a custom 7-state machine player controller (GDScript, Godot 4)</li>
             <li><a href="https://github.com/RYOMA-SyY/BloodDontaionFullstackWeb" target="_blank"
                 rel="noreferrer">BloodDontaionFullstackWeb</a> — Gamified full-stack blood donation platform tracking LifePoints and donor ranks (Iron to Immortal) to build community solidarity (TypeScript, JWT)</li>
-            <li><a href="https://chitchat-websocket-jee-production.up.railway.app/" target="_blank"
-                rel="noreferrer">CHITCHAT-WebSocket-JEE</a> — Real-time chat application using Jakarta EE and WebSockets (Java, JSP, WebSockets)</li>
             <li><a href="https://github.com/RYOMA-SyY/HardwareStore-FULLSTACK-WEB" target="_blank"
                 rel="noreferrer">HardwareStore-FULLSTACK-WEB</a> — Full‑stack hardware store web application built for El Ouakifi Services internship (JavaScript)</li>
             <li><a href="https://ryoma-syy.github.io/ChessMe/home.html" target="_blank" rel="noreferrer">ChessMe</a> — Strategic chess game implementation with custom chess board GUI (HTML, CSS, JavaScript)</li>
@@ -129,17 +217,38 @@
 
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <h2 style="color:var(--primary)">Education</h2>
+          <h2 style="color:var(--primary)" data-i18n="resume.edu">Education</h2>
           <ul>
             <li>2 years at BTS Ibn Ghazala</li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-6">
-          <h2 style="color:var(--primary)">Experience</h2>
+          <h2 style="color:var(--primary)" data-i18n="resume.exp">Experience</h2>
           <ul>
-            <li>Intern — El Ouakifi Services: Built the <a
-                href="https://github.com/RYOMA-SyY/HardwareStore-FULLSTACK-WEB" target="_blank" rel="noreferrer">HC
-                PJ</a> full‑stack e‑commerce website</li>
+            <li><strong>AI &amp; Backend Developer Intern — WallFit</strong> (May 2026)
+              <ul>
+                <li>Designed and developed a RAG solution for a women's fitness mobile application (<a href="https://github.com/RYOMA-SyY/WallFit-RAG" target="_blank" rel="noreferrer">WallFit-RAG</a>)</li>
+                <li>Integrated LLM-based contextual retrieval for personalized fitness recommendations</li>
+                <li>Built and optimized backend APIs supporting AI-driven features</li>
+              </ul>
+              <div class="project-badges">
+                <span class="tech-badge">RAG</span>
+                <span class="tech-badge">LLM</span>
+                <span class="tech-badge">Python</span>
+              </div>
+            </li>
+            <li><strong>Full-Stack Developer Intern — El Ouakifi Services</strong> (September 2025 – October 2025)
+              <ul>
+                <li>Developed <a href="https://github.com/RYOMA-SyY/HardwareStore-FULLSTACK-WEB" target="_blank" rel="noreferrer">HC PJ</a>, a full-stack e-commerce platform with React frontend and Django backend</li>
+                <li>Implemented product catalog, shopping cart, user authentication, and order management</li>
+                <li>Deployed on Railway and Vercel; managed PostgreSQL database</li>
+              </ul>
+              <div class="project-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">PostgreSQL</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -159,6 +268,7 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="js/i18n.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/theme.js"></script>
 </body>

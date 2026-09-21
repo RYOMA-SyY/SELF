@@ -1,14 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 :root {
-    --bg: #ffffff;
-    --surface: #f7f7fb;
-    --text: #000000;
-    --muted: #606060;
+    --bg: #f4f1fb;
+    --surface: #efe9fd;
+    --text: #1a1033;
+    --muted: #6b6390;
     --primary: #8B5CF6;
     --accent: #8B5CF6;
     --gap: 1rem;
     --radius: 6px;
+}
+
+/* Nicer light-mode page background (soft samurai violet gradient) */
+body.light-mode,
+body.minimal:not(.dark-mode) {
+    background: linear-gradient(180deg, #f6f3ff 0%, #eef1ff 45%, #fdf3ff 100%);
+    background-attachment: fixed;
+    color: var(--text);
+}
+body.light-mode .section-container,
+body.light-mode .template-example,
+body.minimal:not(.dark-mode) .section-container,
+body.minimal:not(.dark-mode) .template-example {
+    background-color: transparent;
+}
+body.light-mode .footer-container,
+body.minimal:not(.dark-mode) .footer-container {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(139, 92, 246, 0.18);
 }
 
 html{
@@ -39,17 +60,40 @@ a{
 a:active,a:hover{
     outline:0
 }
-a i {
+a i,
+.fa-icon,
+.fa-icon a,
+.list-icons a i {
     text-decoration: none;
-    color:black;
+    color: var(--text);
 }
-a i:hover {
+a i:hover,
+.fa-icon a:hover,
+.fa-icon a:hover i,
+.list-icons a:hover i {
     text-decoration: none;
-    color:#606060;
+    color: var(--primary);
 }
 a i:active {
     text-decoration: none;
-    color:#303030;
+    color: var(--muted);
+}
+/* Footer icons follow the active theme */
+.footer-container a i,
+.footer-container .fa-icon {
+    color: inherit;
+}
+body.dark-mode a i,
+body.dark-mode .fa-icon,
+body.dark-mode .fa-icon a,
+body.dark-mode .list-icons a i {
+    color: #ffffff;
+}
+body.dark-mode a i:hover,
+body.dark-mode .fa-icon a:hover,
+body.dark-mode .fa-icon a:hover i,
+body.dark-mode .list-icons a:hover i {
+    color: var(--primary);
 }
 abbr[title]{
     border-bottom:1px dotted
@@ -4022,7 +4066,7 @@ blockquote .small,blockquote small{
     font-size:50%
 }
 .fa-icon{
-    color:#000;
+    color:var(--text);
     width:32px;
     height:32px;
     display:inline-block;
@@ -4948,4 +4992,82 @@ body.dark-mode .footer-container {
         font-size: 13px;
         margin-bottom: 8px;
     }
+}
+
+/* Tech / skill pill badges */
+.tech-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 2px 4px 2px 0;
+    border-radius: 999px;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1.6;
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    color: var(--text);
+    white-space: nowrap;
+}
+.tech-badge.exploring {
+    border-style: dashed;
+    opacity: 0.9;
+}
+.project-badges {
+    margin: 4px 0 0 0;
+}
+.main-project {
+    margin-bottom: 12px;
+}
+
+/* Language switcher (right side of the theme toggle) */
+.navbar-right-content {
+    gap: 10px;
+}
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: #2d3748;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+.lang-btn:hover {
+    background: rgba(139, 92, 246, 0.15);
+}
+.lang-btn.active {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.45);
+}
+body.dark-mode .lang-switch {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .lang-btn {
+    color: #e0e0e0;
+}
+body.dark-mode .lang-btn:hover {
+    background: rgba(139, 92, 246, 0.3);
+}
+body.dark-mode .lang-btn.active {
+    background: var(--primary);
+    color: #fff;
 }

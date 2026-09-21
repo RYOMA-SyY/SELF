@@ -32,8 +32,17 @@ React Native
 PrimeReact
 GDScript
 Godot 4
+Godot Engine
+Flutter (exploring)
+Dart (exploring)
 Django REST Framework
 SQLite3
+PostgreSQL
+MySQL
+Ghidra (starter)
+Assembly (starter)
+Minecraft Modding
+Black Ops 2 Modding
 Retrieval-Augmented Generation (RAG)
 ChromaDB
 
